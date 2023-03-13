@@ -12,5 +12,11 @@ class Account {
     balance = balance + value;
   }
 
+  String ToString(){
+    return
+      "Name: $name\n" +
+      "Balance: $balance\n" +
+      "Authenticated?: $isAuthenticated.";
+  }
 
 }

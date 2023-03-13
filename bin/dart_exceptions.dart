@@ -22,5 +22,5 @@ void main() {
 
   // Observando resultado
 
-  bankController.obter_mapas();
+  print(bankController.Obter_mapas());
 }

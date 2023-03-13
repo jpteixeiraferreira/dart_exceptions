@@ -3,17 +3,13 @@ import '../models/account.dart';
 class BankController {
   final Map<String, Account> _database = {};
 
-  void obter_mapas(){
+  List<String> Obter_mapas(){
+    List<String> values = [];
     _database.forEach((String key, Account account){
-    print("Key: $key" + " " + "Values: \n" +
-        "Name: ${account.name}\n"
-        "Balance: ${account.balance}\n"+
-        "Autethicated?: ${account.isAuthenticated
-        }"
+      values.add("Key: $key" + " " + "Values: ${account.ToString()}");
+        }
     );
-    });
-
-
+    return values;
   }
   addAccount({required String id, required Account account}) {
     _database[id] = account;
